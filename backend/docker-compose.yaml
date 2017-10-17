@@ -1,0 +1,15 @@
+version: "2"
+services:
+  db:
+    container_name: db
+    image: postgres
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_DB: root
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    network_mode: bridge

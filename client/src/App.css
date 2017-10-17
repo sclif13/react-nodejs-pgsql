@@ -1,0 +1,29 @@
+.App {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.App input {
+  margin: 5px;
+}
+
+.Nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #607d8b;
+  height: 40px;
+}
+
+.Nav input {
+  margin: 5px;
+}

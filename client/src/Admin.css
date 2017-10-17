@@ -1,0 +1,53 @@
+.Admin {
+  position: absolute;
+  top:30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.Admin ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Admin ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.Admin ul li span {
+  flex: 1;
+}
+
+.Admin form input {
+  margin: 5px;
+}
+
+.remove {
+  margin-left: 10px;
+}
+
+.Admin .error {
+  margin-top: 40px;
+  text-align: center;
+  color: red;
+}
+
+.Nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #607d8b;
+  height: 40px;
+}
+
+.Nav input {
+  margin: 5px;
+}
