@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import auth from './Auth';
 
 class Phones extends Component {
     constructor(props) {
@@ -15,7 +16,13 @@ class Phones extends Component {
         this.deleteHandler = this.deleteHandler.bind(this);
     }
     componentDidMount() {
-        axios.get("/phones")
+        axios({
+            method: 'get',
+            url: "/phones",
+            headers: {
+                Authorization: auth.getToken()
+            }
+        })
             .then(res => {
                 this.setState({ phones: res.data })
             })
@@ -55,6 +62,9 @@ class Phones extends Component {
                 url: "/phones/phone",
                 data: {
                     phone: this.state.phone
+                },
+                headers: {
+                    Authorization: auth.getToken()
                 }
             })
                 .then((res) => {
@@ -75,6 +85,9 @@ class Phones extends Component {
         axios({
             method: "delete",
             url: `/phones/phone/${id}`,
+            headers: {
+                Authorization: auth.getToken()
+            }
         })
             .then(res => {
                 const phones = this.state.phones.filter((item) => item.id !== id)
