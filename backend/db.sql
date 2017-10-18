@@ -1,7 +1,8 @@
- CREATE TABLE public.users
+CREATE TABLE public.users
 	(
 	    id "serial" NOT NULL UNIQUE,
-	    user_id varchar(200) NOT NULL UNIQUE,
+	    login varchar(200) NOT NULL UNIQUE,
+		password varchar(200) NOT NULL UNIQUE,
 		created_at timestamp with time zone NOT NULL DEFAULT NOW(),
 	    PRIMARY KEY (id)
 	)
